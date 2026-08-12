@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Eligibility | Friend Pocket</title>
+<meta name="description" content="Get a preliminary eligibility indication for Friend Pocket's demo financial support options.">
+<link rel="icon" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="eligibility">
+
+<div class="loading-screen" id="loadingScreen"><span class="brand-mark"></span><h2>Friend Pocket</h2><p>Loading eligibility check…</p></div>
+<div id="app-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Check Eligibility</h1>
+      <p>Share a few details for a preliminary indication. This is a demo flow and is not a credit decision.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width:760px;">
+      <div class="form-card reveal">
+        <form id="eligibilityForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="18" max="80" placeholder="e.g. 29" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="mobile">Mobile Number</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="employmentType">Employment Type</label>
+              <select id="employmentType" name="employmentType" required>
+                <option value="">Select</option>
+                <option>Salaried</option>
+                <option>Self-employed</option>
+                <option>Business owner</option>
+                <option>Other</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="monthlyIncome">Monthly Income (₹)</label>
+              <input type="number" id="monthlyIncome" name="monthlyIncome" min="0" placeholder="e.g. 30000" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="requestedAmount">Requested Amount (₹)</label>
+              <input type="number" id="requestedAmount" name="requestedAmount" min="5000" max="100000" placeholder="e.g. 40000" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="existingEmi">Existing EMI (₹, if any)</label>
+              <input type="number" id="existingEmi" name="existingEmi" min="0" placeholder="0">
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Your city" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field full">
+              <label for="purpose">Loan Purpose</label>
+              <input type="text" id="purpose" name="purpose" placeholder="e.g. Medical expense, home repair">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px;">Check Eligibility</button>
+        </form>
+
+        <div class="eligibility-result" id="eligibilityResult" style="display:none;"></div>
+      </div>
+
+      <p style="text-align:center;color:var(--gray-500);font-size:0.85rem;margin-top:18px;">This tool provides a preliminary indication only and does not guarantee approval of credit.</p>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/eligibility.js"></script>
+</body>
+</html>
