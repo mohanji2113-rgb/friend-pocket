@@ -1,0 +1,16 @@
+{
+  "name": "Friend Pocket",
+  "short_name": "Friend Pocket",
+  "description": "Simple. Transparent. Financial Support. (Demo prototype)",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#07111F",
+  "theme_color": "#07111F",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
